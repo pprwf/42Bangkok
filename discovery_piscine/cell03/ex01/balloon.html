@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+    <title>Explode this balloon</title>
+</head>
+<body>
+    <div id="balloon" onclick="glowing(); colorChanged();" onmouseout="mouse();"></div>
+    <script>
+        var balloon = document.getElementById("balloon");
+
+        function glowing() {
+            var balloonHeight = balloon.clientHeight;
+            var balloonWidth = balloon.clientWidth;
+            if (balloonHeight < 420 && balloonWidth < 420) {
+                balloon.style.width = (balloon.clientWidth + 100) + "px";
+                balloon.style.height = (balloon.clientHeight + 100) + "px";
+            } else {
+                balloon.style.width = 200 + "px";
+                balloon.style.height = 200 + "px";
+            }
+        }
+
+        function colorChanged() {
+            switch (balloon.style.backgroundColor || "red") {
+                case "red":
+                    balloon.style.backgroundColor = "green";
+                    break;
+                case "green":
+                    balloon.style.backgroundColor = "blue";
+                    break;
+                default:
+                    balloon.style.backgroundColor = "red";
+            }
+        }
+
+        function mouse() {
+            switch (balloon.style.backgroundColor) {
+                case "red":
+                    balloon.style.backgroundColor = "blue";
+                    break;
+                case "green":
+                    balloon.style.backgroundColor = "red";
+                    break;
+                default:
+                    balloon.style.backgroundColor = "green";
+            }
+            var balloonHeight = balloon.clientHeight;
+            var balloonWidth = balloon.clientWidth;
+            if (balloonHeight >= 205 && balloonWidth >= 205) {
+                balloon.style.width = (balloon.clientWidth - 5) + "px";
+                balloon.style.height = (balloon.clientHeight - 5) + "px";
+            }
+        }
+    </script>
+</body>
+</html>
