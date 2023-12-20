@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="background.css">
-    <script src="background.js"></script>
+    <script>
+        function colorChange() {
+            const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = color;
+        }
+        
+    </script>
     <title>Last Cell</title>
 </head>
 <body>
