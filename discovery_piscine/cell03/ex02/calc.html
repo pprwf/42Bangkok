@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3.2</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="left" />
+        <select id="operator">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">*</option>
+            <option value="div">/</option>
+            <option value="mod">%</option>
+        </select>
+        <input type="text" id="right" />
+        <input type="submit" value="Try me!" onclick="calculate();" />
+    </div>
+    <script>
+        setInterval(function(){ alert("Please, use me...") }, 30000)
+
+        function calculate () {
+            var left = Number(document.getElementById("left").value);
+            var right = Number(document.getElementById("right").value);
+            var operator = document.getElementById("operator").options[document.getElementById("operator").selectedIndex].value;
+            var result;
+
+            if (left === "" || right === "") {
+                return;
+            } else if (left < 0 || right < 0 || !isNumber(left) || !isNumber(right)) {
+                alert("Error :(");
+            } else if ((operator == "div" || operator == "mod") && right == 0) {
+                alert("It’s over 9000!");
+                console.log("It’s over 9000!");
+            } else {
+                switch (operator) {
+                    case "add":
+                        result = left + right;
+                        break;
+                    case "sub":
+                        result = left - right;
+                        break;
+                    case "mul":
+                        result = left * right;
+                        break;
+                    case "div":
+                        result = left / right;
+                        break;
+                    default:
+                        result = left % right;
+                }
+                alert(result);
+                console.log(result);
+            }
+        }
+    </script>
+</body>
+</html>
