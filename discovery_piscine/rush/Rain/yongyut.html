@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Kalnia", serif;
+        font-family: "Oswald", sans-serif;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100&family=Oswald:wght@200&family=Sevillana&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="flex relative h-full min-h-[100dvh] max-w-[100dvw] flex-col bg-[#FFDAB9] p-2"
+    >
+      <nav
+        class="fixed z-50 mx-auto mt-0 w-full max-w-none rounded-lg border-blue-400 bg-white py-6 text-3xl shadow ring-1 ring-gray-400 text-center"
+      >
+        Yongyut Chanuphat
+        <div class="sm:mt-8 gap-4 hidden lg:grid sm:grid-cols-2 md:grid-cols-5">
+          <div
+            class="relative bg-white mt-8 hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 sm:mt-0"
+          >
+            <a href="#Myself">My self</a>
+          </div>
+          <div
+            class="relative bg-white hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+          >
+            <a href="#Information">Information</a>
+          </div>
+          <div
+            class="relative bg-white hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+          >
+            <a href="#Education">Education</a>
+          </div>
+          <div
+            class="relative bg-white hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+          >
+            <a href="#Contact">Contact</a>
+          </div>
+          <div
+            class="relative bg-white hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+          >
+            <a href="../Main Page/index.html">Back</a>
+          </div>
+        </div>
+        <center>
+          <div class="lg:hidden w-full justify-center items-center mt-6">
+            <button
+              class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              onclick="toggleMenu()"
+            >
+              <span>Navbar Menu</span>
+            </button>
+          </div>
+
+          <div
+            id="mobileMenu"
+            class="lg:hidden fixed top-20 left-0 w-full  bg-white bg-opacity-90 z-50 hidden"
+          >
+            
+            <div class="flex flex-col items-center ">
+              <a href="#Myself" class="mt-2 hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">My self</a>
+              <a href="#Information" class="mt-2 hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Information</a>
+              <a href="#Education" class="mt-2 hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Education</a>
+              <a href="#Contact" class="mt-2 hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Contact</a>
+              <a href="../Main Page/index.html" class="mt-2 hover:bg-[#FFDAB9] active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Back</a>
+            </div><div class="flex justify-center mt-2">
+              <button class="text-black" onclick="toggleMenu()">Close</button>
+            </div>
+          </div>
+        </center>
+        <script>
+          function toggleMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            mobileMenu.classList.toggle("hidden");
+          }
+        </script>
+      </nav>
+
+      <div
+        class="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 py-8 mt-40 border-black"
+        id="Myself"
+      >
+        <div
+          class="relative justify-center items-center w-full max-w-full border-blue-400 bg-white text-3xl shadow ring-1 ring-gray-400 text-center"
+        >
+          <div
+            class="relative justify-center items-center w-full max-w-full border-blue-400 bg-white py-6 text-3xl shadow ring-1 ring-gray-400 text-center"
+          >
+            <img
+              src="/Rain/image/LINE_ALBUM_Narakmakkk_231222_1.jpg"
+              class="w-full justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+              alt="My Image 1"
+            />
+          </div>
+        </div>
+
+        <div
+          class="relative justify-center items-center w-full max-w-full border-blue-400 bg-white py-6 text-3xl shadow ring-1 ring-gray-400 text-center"
+        >
+          <img
+            src="/Rain/image/LINE_ALBUM_รูปน้องเรนสุดหล่อ_231222_1.jpg"
+            class="w-full justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+            alt="My Image 2"
+          />
+        </div>
+
+        <div
+          class="relative justify-center items-center w-full max-w-full border-blue-400 bg-white py-6 text-3xl shadow ring-1 ring-gray-400 text-center"
+        >
+          <img
+            src="/Rain/image/LINE_ALBUM_1y 👻😻_231222_1.jpg"
+            class="w-full justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+            alt="My Image 3"
+          />
+        </div>
+      </div>
+
+      <div class="w-full ">
+        <img
+          src="/Rain/image/giphy.gif"
+          class="w-1/6 lg:mt-80 mt-20"
+          id="Information"
+        />
+      </div>
+      <div
+        class="relative mx-auto w-1/2 justify-center items-center border-black bg-white py-6 text-3xl shadow ring-1 ring-gray-400 text-center"
+      >
+        Introduce Myself
+        <div class="relative mx-auto mt-12 w-full">Name : Yongyut Chanuphat</div>
+        <div class="relative mx-auto w-full">Nickname : Rain</div>
+        <div class="relative mx-auto w-full">Age : 20</div>
+        <div class="relative mx-auto w-full">Birthday : 16/08/46</div>
+        <div class="relative mx-auto w-full">Hobby : Playing Guitar</div>
+        <div class="relative mx-auto w-full">Game : Rov , TFT</div>
+        <div class="relative mx-auto my-12 w-full">About My Self</div>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </div>
+
+      <div
+        class="relative mx-auto w-full lg:mt-80 mt-20 justify-center items-center border-black bg-white py-6 text-3xl shadow ring-1 ring-gray-400 text-center"
+        id="Education"
+      >
+        Education
+      </div>
+      <div
+        class="relative mx-auto w-full justify-center items-center text-center py-8 border-black"
+      >
+        <div class="w-full text-center justify-center items-center rounded-md p-4">
+  <div class="my-5 h-[3px] w-full rounded-md bg-[#F8B06A]"></div>
+
+        <div class="mb-5 flex flex-col justify-center space-y-9 text-xl">
+          <div class="flex justify-start">
+            <div class="flex w-full sm:w-[30%] flex-col">
+              <h1 class="text-sm sm:text-sm md:text-base lg:text-4xl font-bold">kindergarten</h1>
+            </div>
+            <div class="flex flex-col">
+              <div class="mx-5 h-full w-[5px] sm:w-[5px] rounded-md bg-[#1287ff]"></div>
+            </div>
+            <div class="flex w-full sm:w-[70%] flex-col space-y-3 text-sm sm:text-sm md:text-base lg:text-xl">
+              <center>
+                <img
+                  src="/Rain/image/222.jpg"
+                  class="w-full sm:w-1/2 justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+                  alt="อนุบาล"
+                />
+              </center>
+            </div>
+          </div>
+              <div class="flex justify-start">
+            <div class="flex w-full sm:w-[30%] flex-col">
+              <h1 class="text-sm sm:text-sm md:text-base lg:text-4xl font-bold">Primary education</h1>
+            </div>
+            <div class="flex flex-col">
+              <div class="mx-5 h-full w-[5px] sm:w-[5px] rounded-md bg-[#1287ff]"></div>
+            </div>
+            <div class="flex w-full sm:w-[70%] flex-col space-y-3 text-sm sm:text-sm md:text-base lg:text-xl">
+              <center>
+                <img
+                  src="/Rain/image/OIP (2).jpg"
+                  class="w-full sm:w-1/2 justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+                  alt="อนุบาล"
+                />
+              </center>
+            </div>
+          </div>
+              <div class="flex justify-start">
+            <div class="flex w-full sm:w-[30%] flex-col">
+              <h1 class="text-sm sm:text-sm md:text-base lg:text-4xl font-bold">Secondary education</h1>
+            </div>
+            <div class="flex flex-col">
+              <div class="mx-5 h-full w-[5px] sm:w-[5px] rounded-md bg-[#1287ff]"></div>
+            </div>
+            <div class="flex w-full sm:w-[70%] flex-col space-y-3 text-sm sm:text-sm md:text-base lg:text-xl">
+              <center>
+                <img
+                  src="/Rain/image/logo.png"
+                  class="w-full sm:w-1/2 justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+                  alt="อนุบาล"
+                />
+              </center>
+            </div>
+          </div>
+              <div class="flex justify-start">
+            <div class="flex w-full sm:w-[30%] flex-col">
+              <h1 class="text-sm sm:text-sm md:text-base lg:text-4xl font-bold">Now</h1>
+            </div>
+            <div class="flex flex-col">
+              <div class="mx-5 h-full w-[5px] sm:w-[5px] rounded-md bg-[#1287ff]"></div>
+            </div>
+            <div class="flex w-full sm:w-[70%] flex-col space-y-3 text-sm sm:text-sm md:text-base lg:text-xl">
+              <center>
+                <img
+                  src="/Rain/image/R (2).gif"
+                  class="w-full sm:w-1/2 justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+                  alt="อนุบาล"
+                />
+              </center>
+            </div>
+          </div>
+            </div>
+          </center>
+        </div>
+        <div class="my-5 h-[3px] w-full rounded-md bg-[#F8B06A]"></div>
+      </div>
+      <div
+        class="relative mx-auto w-full lg:mt-80 mt-20 justify-center items-center text-center py-8 border-black relative mx-auto w-1/2 justify-center items-center border-black bg-white py-6 text-3xl shadow ring-1 ring-gray-400 text-center"
+        id="Contact"
+      >
+        Contact
+      </div>
+      <div
+        class="relative mx-auto w-full grid grid-cols-3 gap-4 justify-center items-center text-center py-8 border-black"
+      >
+        <div
+          class="relative justify-center items-center mt-0 w-full max-w-none text-3xl text-center"
+        >
+          <div
+            class="mx-auto mt-0 w-1/2 justify-center items-center max-w-none border-blue-400 py-6 text-3xl text-center"
+          ><a href="https://web.facebook.com/yongyut.chanuphat">
+            <img
+              src="/Rain/image/Facebook_logo_36x36.svg.png"
+              
+              class="w-full justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+            /></a>
+          </div>
+        </div>
+
+        <div
+          class="mx-auto mt-0 w-1/2 justify-center items-center max-w-none border-blue-400 py-6 text-3xl text-center"
+        ><a href="https://www.instagram.com/rain.nyy_/">
+          <img
+            src="/Rain/image/instagram-logo-1.png"
+            class="w-full justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+          /></a>
+        </div>
+        <div class="mx-auto mt-0 w-1/2 justify-center items-center max-w-none border-blue-400 py-6 text-3xl text-center">
+  <div class="relative">
+    <img
+      src="/Rain/image/email.png"
+      class="w-full justify-center items-center shadow-red-700 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:shadow-lg"
+    />
+    <p class="absolute top-20 left-0 w-full h-full flex justify-center items-center opacity-0 transition-all duration-200 ease-in-out hover:opacity-100">
+      65070193@kmitl.ac.th
+    </p>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
